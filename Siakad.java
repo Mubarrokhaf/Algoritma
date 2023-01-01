@@ -145,13 +145,13 @@ public class Siakad {
                 if(jarak <= 1){ 
                     jarak = 1;
                     urut = 1;
-                    for(int x=0;x+jarak<jumlahData;x++){ 
-                        int temp2 = Integer.parseInt(mahasiswa[x].getNim());
-                        int temp3 = Integer.parseInt(mahasiswa[x+jarak].getNim());
+                    for(int i=0;i+jarak<jumlahData;i++){ 
+                        int temp2 = Integer.parseInt(mahasiswa[i].getNim());
+                        int temp3 = Integer.parseInt(mahasiswa[i+jarak].getNim());
                         if(temp2 >(temp3)){ 
-                            Mahasiswa temp = mahasiswa[x];
-                            mahasiswa[x] = mahasiswa[x+jarak];
-                            mahasiswa[x+jarak] = temp;
+                            Mahasiswa temp = mahasiswa[i];
+                            mahasiswa[i] = mahasiswa[i+jarak];
+                            mahasiswa[i+jarak] = temp;
                             urut = 0;
                         }
                     }
